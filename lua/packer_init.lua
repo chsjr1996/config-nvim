@@ -89,6 +89,8 @@ return packer.startup(function(use)
 
   use 'akinsho/bufferline.nvim'
 
+  use 'windwp/nvim-spectre'
+
   -- Autocomplete (and its deps)
   use 'L3MON4D3/LuaSnip'
   use 'hrsh7th/cmp-nvim-lsp'

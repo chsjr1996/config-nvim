@@ -26,7 +26,6 @@ map('n', '<C-l>', '<C-w>l')
 map('n', '<leader>r', ':so %<CR>')
 
 -- Saving actions
-map('n', '<leader>s', ':w<CR>')
 map('n', '<C-s>', ':w<CR>')
 
 -- Close actions
@@ -38,8 +37,10 @@ map('n', '<leader>c', ':bw<CR>')
 -- General behavior
 -----------------------------------------------------------
 
--- Do not yank with x
-map('n', 'x', '"_x')
+-- Do not yank with x, c
+map('', 'x', '"_x')
+map('', 'c', '"_c')
+
 
 -- Select all
 map('n', '<C-a>', 'gg<S-v>G')
@@ -89,6 +90,11 @@ map('n', '<leader>tgc', '<cmd>Telescope git_commits<cr>')
 map('n', '<leader>tgb', '<cmd>Telescope git_branches<cr>')
 map('n', '<leader>tgs', '<cmd>Telescope git_status<cr>')
 
+-- Spectre
+map('n', '<leader>so', '<cmd>lua require("spectre").open()<CR>')
+map('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>')
+
 return {
   lsp_on_attach_telescope_maps = lsp_on_attach_telescope_maps
 }
+
