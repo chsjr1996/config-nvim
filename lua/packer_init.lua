@@ -78,6 +78,11 @@ return packer.startup(function(use)
   use {
     'phaazon/hop.nvim',
     event = "BufRead",
+    config = function()
+      require("hop").setup {
+        keys = 'etovxqpdygfblzhckisuran',
+      }
+    end
   }
 
   use 'kyazdani42/nvim-tree.lua'
