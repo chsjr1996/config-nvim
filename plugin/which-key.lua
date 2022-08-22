@@ -10,5 +10,9 @@ if not status_ok then
   return
 end
 
-whichkey.setup {}
+whichkey.setup {
+  window = {
+    border = "single"
+  }
+}
 
