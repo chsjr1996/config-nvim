@@ -47,6 +47,12 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
   },
 }
 
+-- LSP handlers (apply border on popups)
+local handlers =  {
+  ["textDocument/hover"] =  vim.lsp.with(vim.lsp.handlers.hover, { border = 'single' }),
+  ["textDocument/signatureHelp"] =  vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'single' }),
+}
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -127,7 +133,8 @@ for _, lsp in ipairs(servers) do
     flags = {
       -- default in neovim 0.7+
       debounce_text_changes = 150,
-    }
+    },
+    handlers = handlers
   }
 end
 
