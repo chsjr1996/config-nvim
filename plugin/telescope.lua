@@ -22,7 +22,6 @@ telescope.setup {
       -- disable netrw and use telescope-file-browser in its place
       hijack_netrw = true,
       previewer = false,
-      initial_mode = "normal",
     },
   },
 }
