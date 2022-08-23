@@ -48,6 +48,10 @@ map('n', '-', '<C-x>')
 -- Select all
 map('n', '<C-a>', 'gg<S-v>G')
 
+-- Move current line to up, down M-{j,k}
+map('n', '<M-j>', '<cmd>m+<CR>')
+map('n', '<M-k>', '<cmd>m-2<CR>')
+
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
 -----------------------------------------------------------
@@ -61,8 +65,8 @@ map('n', '<leader>ef', '<cmd>NvimTreeFindFile<CR>')
 map('n', '<leader>ep', '<cmd>Telescope file_browser<CR>')
 
 -- Bufferline
-map('n', '<S-l>', '<cmd>BufferLineCycleNext<CR>')
-map('n', '<S-h>', '<cmd>BufferLineCyclePrev<CR>')
+map('n', '<Tab>', '<cmd>BufferLineCycleNext<CR>')
+map('n', '<S-Tab>', '<cmd>BufferLineCyclePrev<CR>')
 
 -- Git
 map('n', '<leader>gl', '<cmd>Gitsigns blame_line<CR>')
